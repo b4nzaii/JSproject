@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  background-color:black;
+  height: 50px;
+}
+.nav-links a{
+  color: white;
+}
+.hero-image{
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  justify-content: center;
+  background-image: url(assets/tv-shows.webp);
+  background-size: cover;
+
+  .hero-content{
+    max-width: 600px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 2rem;
+    color: white;
+  }
+}
