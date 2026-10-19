@@ -1,43 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My top 5 series</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <body>
+    <header class="header" id="Home">
+      <nav>
+        <ul class="nav-links">
+          <li class="list-item"><a href="#Home">Home</a></li>
+          <li class="list-item"><a href="#Shows">Top 5</a></li>
+          <li class="list-item"><a href="#AddShow">Add show</a></li>
+        </ul>
+      </nav>
+      <div class="hero-image">
+        <div class="hero-content">
+          <h1>Måns top 5 series of all time</h1>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="cards" id="Shows">
+        <h2>Catalogue</h2>
+        <div class="filters">
+          <button class="filter-btn active" data-genre="all">All</button>
+          <button class="filter-btn" data-genre="Sci-fi">Sci-fi</button>
+          <button class="filter-btn" data-genre="Drama">Drama</button>
+          <button class="filter-btn" data-genre="Crime">Crime</button>
+          <button class="filter-btn" data-genre="Fantasy">Fantasy</button>
+          <button class="filter-btn" data-genre="Animation">Animation</button>
+        </div>
+        <div class="container"></div>
+      </section>
+      <section class="add-show" id="AddShow">
+        <form id="show-form">
+          <h2>Add your own show</h2>
+          <label for="title">Title</label>
+          <input type="text" id="title" required />
 
-<body>
-  <header class="header">
-    <nav>
-      <ul class="nav-links">
-        <li class="list-item"><a href="#">1</a></li>
-        <li class="list-item"><a href="#">2</a></li>
-        <li class="list-item"><a href="#">3</a></li>
-      </ul>
-    </nav>
-    <!---Hero image/landing-->
-    <div class="hero-image">
-      <div class="hero-content">
-        <h1>My top 5 series of all time</h1>
+          <label for="category">Category</label>
+          <input type="text" id="category" required />
+
+          <label for="year">Year</label>
+          <input type="number" id="year" required />
+
+          <label for="type">Type</label>
+          <input type="text" id="type" required />
+
+          <button type="submit">Add Show</button>
+        </form>
+      </section>
+    </main>
+    <div class="modal-overlay" id="details-modal" hidden>
+      <div
+        class="modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <button class="modal-close" id="modal-close" aria-label="Close details">
+          &times;
+        </button>
+        <img id="modal-image" src="" alt="" />
+        <h2 id="modal-title"></h2>
+        <p id="modal-category"></p>
+        <p id="modal-year"></p>
+        <p id="modal-type"></p>
+        <h3>Why it's in my Top 5</h3>
+        <p id="modal-reason"></p>
       </div>
     </div>
-  </header>
-
-  <!---Catalogue with JS to show arrays later-->
-  <main>
-    <section class="cards">
-      <h2>Catalogue</h2>
-      <div class="container">
-      </div>
-    </section>
-  </main>
-
-  <footer>
-
-  </footer>
-  <script src="script.js" type="module"></script>
-</body>
-
+    <footer class="footer">
+      <p>Måns top 5 series</p>
+      <p>Built with html, css and js</p>
+    </footer>
+    <script src="script.js" type="module"></script>
+  </body>
 </html>
